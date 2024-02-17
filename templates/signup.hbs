@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Tendawifiproviders</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+<div class="container" id="container">
+    <img src="https://i.ibb.co/SdQ8P6q/Wifi-provider.png" alt="Wifi-provider">
+    <h1>Create Account</h1>
+   <form action="/signup" method="post">
+        <!-- Add Font Awesome icons to input fields -->
+        <div style="position: relative;">
+            <i class="fas fa-user input-icon"></i>
+            <input placeholder="Name:Ronny" name="name" type="text">
+        </div>
+        <br>
+        <div style="position: relative;">
+            <i class="fas fa-lock input-icon"></i>
+            <input placeholder="Password" name="password" type="password">
+        </div>
+        <br>
+        <input class="sub" type="submit" value="Register">
+    </form>
+    <a href="\">Go back to login page</a>
+</div>
+<script>
+    // Function to display alert for 2 seconds and then redirect to login page
+    function showAlertAndRedirect(message) {
+        alert(message);
+        setTimeout(function() {
+            window.location.href = "/login";
+        }, 2000);
+    }
+
+    // Check if the page has a message from the server
+    document.addEventListener("DOMContentLoaded", function() {
+        const message = "{{message}}"; // Assuming you pass the message from the server
+        if (message) {
+            showAlertAndRedirect(message);
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

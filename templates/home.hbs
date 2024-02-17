@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script src="https://kit.fontawesome.com/c55a744d54.js" crossorigin="anonymous"></script>
+
+    {{!-- <link rel="stylesheet" href="css/login.css"> --}}
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        {{!-- <div class="background">
+            <img src="https://www.acldigital.com/sites/default/files/2020-07/Blog_Banner_1366X560_HARNESSING%20THE%20POWER%20OF%205G.jpg" alt="">
+        </div> --}}
+        <div class="box">
+            <div class="topbar">
+                <div style="text-align: center;">Connected Devices: <br>
+                <span>{{user.connectedDevices}}</span></div>
+                <div class="right">Network Device Name: <br> <Span>{{user.networkDevicesname}}</Span></div>
+                <div class="left"><span>{{user.name}}</span></div>
+            </div>
+            <div class="div1">
+                <div>
+                    <p><i class="fa-solid fa-wallet" style="color: orange;"></i> Curent Balance: <span>{{user.currentBalance}}</span></p>
+                    <p><i class="fa-solid fa-coins" style="color: orange;"></i> Amount Due: Ksh <span>{{user.Amount}}</span></p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-check fa-lg " style="color: #2fb90c;" ></i> Payment Status: <span>{{user.paymentStatus}}</span></p>
+                </div>
+                
+    
+            </div>
+            <div class="div2">
+                <p>Current Package</p>
+                <div class="net">
+                    <div>
+                        <p class="span"><span>{{user.networkSpeed}}</span></p>
+                        <p>Network Speed</p>
+                    </div>
+                     <div class="line"></div>
+<div>
+    <p class="span"><span id="remainingDays">{{user.RemainingDays}}</span> Days</p>
+    <p id="expiryDate">Expires on: <span id="expiryDateValue">{{user.subscriptionStartDate}}</span></p>
+</div>
+                </div>
+            </div>
+            <div class="div3">
+                <div>
+                    <p><i class="fa-solid fa-signal" style="color: #dcedf9;"></i> Signal Strength </p>
+                    <p class="dbm">{{user.signalStrength}}</p>
+                </div>
+            </div>
+     <div class="net">
+        <a href="https://wa.me/+254772809396" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>
+        
+        <a href="/"class="button">Log out</a>
+
+        </a>
+    </div>
+
+        </div>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get elements
+        var remainingDaysElement = document.getElementById('remainingDays');
+        var expiryDateValueElement = document.getElementById('expiryDateValue');
+
+        // Sample subscription start date (replace this with actual data from the database)
+        var subscriptionStartDate = new Date("{{user.subscriptionStartDate}}");
+
+        // Fixed duration for subscription (e.g., 30 days)
+        var subscriptionDurationDays = 30;
+
+        // Calculate remaining days
+        var currentDate = new Date();
+        var subscriptionEndDate = new Date(subscriptionStartDate);
+        subscriptionEndDate.setDate(subscriptionEndDate.getDate() + subscriptionDurationDays);
+        var remainingDays = Math.max(0, Math.ceil((subscriptionEndDate - currentDate) / (1000 * 60 * 60 * 24)));
+
+        // Display remaining days
+        remainingDaysElement.textContent = remainingDays;
+
+        // Display expiry date
+        expiryDateValueElement.textContent = subscriptionEndDate.toDateString();
+
+        // Check if subscription has ended
+        if (currentDate > subscriptionEndDate) {
+            alert('Your subscription has ended. Please make a payment for reactivation.');
+        }
+    });
+</script>
+</body>
+</html>

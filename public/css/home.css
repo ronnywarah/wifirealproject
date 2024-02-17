@@ -1,0 +1,158 @@
+body{
+    background-image: url(https://www.acldigital.com/sites/default/files/2020-07/Blog_Banner_1366X560_HARNESSING%20THE%20POWER%20OF%205G.jpg);
+    background-size: cover;
+    color: white;
+}
+.container{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.right, .left {
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+.background{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.background img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.div1, .div2, .div3{
+    height: 120px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid rgb(226, 156, 63);
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 15px;
+}
+.div1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div2 {
+text-align: center;
+border: 1px solid rgb(18, 136, 18);
+padding: 15px;
+}
+
+.div3{
+    border: 1px solid rgb(81, 150, 230);
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.net {
+display: flex;
+justify-content: space-between; /* Separate links to different corners */
+align-items: center;
+}
+.net1{
+    border-right: 1px solid white;
+}
+span{
+    margin-right: 1.5em;
+    color: orange;
+}
+.net span, .dbm{
+    font-size: 1.5em;
+    margin-right: 1.5em;
+    color: orange;
+}
+.line {
+height: 60px;
+border-right: 2px solid white;
+margin: 0 15px;
+}
+.span  {
+    margin-bottom: -10px;
+}
+.button{
+    width: 100px;
+    height: 20px;
+    background-color: orange;
+    border: 1px solid white;
+    border-radius: 50px 0 50px 0;
+    text-align: center ;
+}
+.button:hover{
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+}
+a {
+text-decoration: none;
+color: white;
+}
+
+a:hover {
+text-decoration: underline;
+color: yellow; /* Change the color when hovering */
+}
+.net a {
+padding: 10px;
+background-color: orange;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.net a:hover {
+background-color: white;
+color: orange;
+}
+.button {
+width: 100px;
+height: 20px;
+background-color: orange;
+border: 1px solid white;
+border-radius: 50px 0 50px 0;
+text-align: center;
+}
+
+.button:hover {
+background-color: white;
+color: orange;
+cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+/* Add styles for small screens */
+body {
+font-size: 14px;
+}
+/* ... other styles ... */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+/* Add styles for medium screens */
+body {
+font-size: 16px;
+}
+/* ... other styles ... */
+}
+#expiryDateValue {
+font-size: 0.8em; /* Adjust the font size for the date */
+}
+
+.net p {
+margin: 0;
+}

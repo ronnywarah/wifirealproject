@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Tendawifiproviders</title>
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    {{#if signupSuccess}}
+    <p style="color: green;">Registration successful. Please login with your credentials.</p>
+{{/if}}
+
+    <div class="container" id="container">
+    <img src="https://i.ibb.co/SdQ8P6q/Wifi-provider.png" alt="Wifi-provider">
+    <h1>Login Form</h1>    
+    <form action="/login" method="post">
+            <!-- Name input with icon -->
+            <div style="position: relative;">
+                <i class="fas fa-user input-icon"></i>
+                <input placeholder="Name" name="name" type="text" autocomplete="off">
+            </div>
+            <br>
+            <!-- Password input with icon -->
+            <div style="position: relative;">
+                <i class="fas fa-lock input-icon"></i>
+                <input placeholder="Password" name="password" type="password" autocomplete="off">
+            </div>
+            <br>
+            <input class="sub" type="submit" value="Login">
+            <h3>Don't have an account?</h3>
+            <a href="/signup">Create a new account</a>
+        </form>
+    </div>
+</body>
+</html>

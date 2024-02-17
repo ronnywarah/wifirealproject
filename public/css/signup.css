@@ -1,0 +1,70 @@
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff; /* White background color */
+    color: #FFA500; /* Orange text color */
+}
+
+#container {
+    text-align: center;
+    transition: all 0.6s ease-in-out;
+}
+
+.container {
+    background-color: orange; /* Lighter orange container background color */
+    border-radius: 2em;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Adjusted for responsiveness */
+    max-width: 650px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+font-weight: bold;
+margin: 5px 0;
+font-size: 1.5em;
+color: white; /* Change to a contrasting color */
+}
+
+/* Style for input and anchor */
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%; /* Adjusted for responsiveness */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+img {
+    width: 280px; /* Adjust the width of the logo */
+    height: 120px; /* Adjust the height of the logo */
+    margin-bottom: 20px; /* Adjust the margin to provide space between the logo and input fields */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+}
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: #555; /* Adjust icon color */
+}
+ input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 70%; /* Adjusted for responsiveness */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
