@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const LogInCollection = require("./mongo");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -90,6 +90,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.listen(port, '192.168.20.102', () => {
+app.listen(port, () => {
     console.log('Server is running and accessible from all network interfaces');
 });
