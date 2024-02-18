@@ -90,6 +90,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+app.listen(port, '192.168.20.102', () => {
     console.log('Server is running and accessible from all network interfaces');
 });
